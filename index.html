@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="main-nav flex container">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="news-logo.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <div class="hover-link nav-item" id="IPL" onclick="onNavItemClick('IPL')">IPL</div>
+                    <div class="hover-link nav-item" id="Finance" onclick="onNavItemClick('Finance')">Finance</div>
+                    <div class="hover-link nav-item" id="Politics" onclick="onNavItemClick('Politics')">Politics</div>
+                    <div class="hover-link nav-item" id="Sports" onclick="onNavItemClick('Sports')">Sports</div>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id="news-input" placeholder="e.g. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the card title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 10/07/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam architecto accusantium quae inventore harum maxime corrupti cupiditate minima labore obcaecati.</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
